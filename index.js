@@ -179,7 +179,7 @@ function mostFireMileage(data){
 
 getData()
 .then(() =>{
-    readFile('D:\cars_data.json')
+    readFile('cars_data.json')
 .then((data) =>{
     const arrayData = JSON.parse(data);
     console.log('Q1 ===========================>\n',mostExist(arrayData));
