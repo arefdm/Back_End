@@ -1,3 +1,4 @@
+const startTime = Date.now();
 const axios = require("axios");
 const fs = require("fs/promises");
 
@@ -188,6 +189,9 @@ getData()
     console.log('Q5 ===========================>\nlowest price',lowestPrice(arrayData),'\nlowest mileage',lowestMileage(arrayData));
     console.log('Q6 ===========================>\n',mostFirePrice(arrayData));
     console.log('Q7 ===========================>\n',mostFireMileage(arrayData));
+    const endTime = Date.now();
+    const executionTime = ((endTime - startTime) / 1000).toFixed(2);
+    console.log(`Execution completed in ${executionTime} seconds.`);
 }).catch((error) => {
     console.error(error);
 });
@@ -195,4 +199,6 @@ getData()
 .catch((error) =>{
     console.error(error);
 });
+
+
 
